@@ -1,0 +1,28 @@
+.titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f8f9fa;
+  margin-bottom: 0.5rem;
+}
+
+.detalle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f8f9fa;
+  margin-bottom: 1rem;
+}
+
+.descripcion {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f8f9fa;
+  margin-bottom: 1.5rem;
+}
+
+.precio {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+

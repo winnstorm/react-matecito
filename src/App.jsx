@@ -7,6 +7,7 @@ import Cart from "./components/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "./components/CartContext";
 import Checkout from "./components/Checkout";
+import CustomFooter from "./components/Footer";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
+      <CustomFooter />
     </CartContextProvider>
   );
 }

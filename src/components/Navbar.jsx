@@ -18,12 +18,16 @@ function NavBar() {
         fluid
         className="fixed w-full z-50 top-0 left-0 border-b bg-white shadow-sm py-4"
       >
-        <Navbar.Brand as={Link} to="/">
-          <img
-            src="/src/assets/Matecito.png"
-            className="mr-3 h-8 sm:h-9"
-            alt="Logo"
-          />
+        <Navbar.Brand as={Link} to="/" className="flex flex-col items-start">
+          <div className="flex items-center gap-2">
+            🧉
+            <span className="self-center text-color-white text-2xl font-semibold whitespace-nowrap bg-clip-text">
+              MATECITO
+            </span>
+          </div>
+          <span className="text-[10px] text-gray-500 -mt-1 ml-10">
+            Tienda de Mates
+          </span>
         </Navbar.Brand>
 
         <div className="flex md:order-2 gap-4 items-center">

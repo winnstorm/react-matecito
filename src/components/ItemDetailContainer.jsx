@@ -1,22 +1,33 @@
 import { useState, useEffect } from "react";
-import { getAsyncItemById } from "../../getAsyncData";
+import { getAsyncItemById } from "../../database";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { Spinner } from "flowbite-react";
 
 function ItemDetailContainer() {
-  const [product, setProduct] = useState({});
+  const [item, setItem] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
 
   useEffect(() => {
     async function getProduct() {
       const data = await getAsyncItemById(id);
-      setProduct(data);
+      setItem(data);
+      setLoading(false);
     }
     getProduct();
   }, [id]);
 
-  return <ItemDetail {...product} />;
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Spinner size="xl" />
+      </div>
+    );
+  }
+
+  return <ItemDetail item={item} />;
 }
 
 export default ItemDetailContainer;

@@ -78,11 +78,11 @@ function Checkout() {
                 <HiCheck className="h-8 w-8 text-green-600" />
               </div>
             </div>
-            <h2 className="mt-4 text-2xl font-bold text-gray-900">
+            <h2 className="mt-4 text-2xl font-bold text-gray-200">
               ¡Gracias por tu compra!
             </h2>
-            <p className="mt-2 text-gray-600">Tu número de orden es:</p>
-            <p className="mt-1 font-mono text-lg font-bold text-blue-600">
+            <p className="mt-2 text-gray-400">Tu número de orden es:</p>
+            <p className="mt-1 font-mono text-lg font-bold text-blue-400">
               {orderId}
             </p>
           </div>

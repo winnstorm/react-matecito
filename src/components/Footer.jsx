@@ -9,7 +9,7 @@ function CustomFooter() {
           <div className="space-y-4 mb-8 md:mb-0">
             <div className="flex items-center gap-2">
               🧉
-              <span className="self-center text-color-white text-2xl font-semibold whitespace-nowrap bg-clip-text">
+              <span className="self-center text-green-400 text-2xl font-semibold whitespace-nowrap bg-clip-text">
                 MATECITO
               </span>
             </div>

@@ -21,11 +21,11 @@ function NavBar() {
         <Navbar.Brand as={Link} to="/" className="flex flex-col items-start">
           <div className="flex items-center gap-2">
             🧉
-            <span className="self-center text-color-white text-2xl font-semibold whitespace-nowrap bg-clip-text">
+            <span className="self-center text-green-400 text-2xl font-semibold whitespace-nowrap bg-clip-text">
               MATECITO
             </span>
           </div>
-          <span className="text-[10px] text-gray-500 -mt-1 ml-10">
+          <span className="text-[10px] text-gray-300 -mt-1 ml-10">
             Tienda de Mates
           </span>
         </Navbar.Brand>

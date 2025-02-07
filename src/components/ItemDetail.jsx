@@ -15,6 +15,10 @@ function ItemDetail({ item }) {
     }
   };
 
+  const getImageUrl = (imageName) => {
+    return `/products/${imageName}`;
+  };
+
   if (!item) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -29,7 +33,7 @@ function ItemDetail({ item }) {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <img
-              src={item.img}
+              src={getImageUrl(item.img)}
               alt={item.title}
               className="w-full h-auto rounded-lg object-cover"
             />

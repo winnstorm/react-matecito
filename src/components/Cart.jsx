@@ -7,6 +7,10 @@ function Cart() {
     useContext(CartContext);
   const total = getTotalPrice();
 
+  const getImageUrl = (imageName) => {
+    return `/products/${imageName}`;
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="bg-white rounded-lg shadow-lg p-6 max-w-3xl mx-auto">
@@ -31,7 +35,7 @@ function Cart() {
                 <li key={item.id} className="py-6">
                   <div className="flex items-center space-x-6">
                     <img
-                      src={item.img}
+                      src={getImageUrl(item.img)}
                       alt={item.title}
                       className="w-24 h-24 object-cover rounded"
                     />

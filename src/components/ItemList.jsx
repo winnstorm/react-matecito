@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./ItemList.css";
 
 function ItemList({ products }) {
+  const getImageUrl = (imageName) => {
+    return `/products/${imageName}`;
+  };
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {products.map((product) => (
@@ -10,7 +14,7 @@ function ItemList({ products }) {
           key={product.id}
           className="max-w-sm hover:shadow-lg transition-shadow duration-300"
           imgAlt={product.title}
-          imgSrc={product.img}
+          imgSrc={getImageUrl(product.img)}
         >
           <Link to={`/item/${product.id}`}>
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">

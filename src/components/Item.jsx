@@ -5,10 +5,18 @@ import "./CardProduct.css";
 function Item(props) {
   const { price, title, text, img, id } = props;
 
+  const getImageUrl = (imageName) => {
+    return `/products/${imageName}`;
+  };
+
   return (
     <div className="card" style={{ width: "300px", height: "400px" }}>
       <div style={{ height: "130px" }}>
-        <img src={img} alt="product img" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        <img
+          src={getImageUrl(img)}
+          alt={title}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
       </div>
       <div className="card-body">
         <h3 className="card-title">{title}</h3>
